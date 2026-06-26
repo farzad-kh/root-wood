@@ -1,7 +1,7 @@
 // app/actions/register.ts
 "use server";
 
-import prisma from "@/prisma/client";
+import { prisma } from "@/lib/prisma";
 import bcrypt from "bcryptjs";
 
 export async function registerUser(formData: {
