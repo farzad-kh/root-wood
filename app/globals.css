@@ -1,0 +1,83 @@
+@import "tailwindcss";
+@import "@heroui/styles"; 
+/*
+ * HeroUI Theme Customization
+ * Add this to your global.css after importing @heroui/styles
+ * Only includes variables users need to customize
+ * @see https://heroui.com/docs/react/getting-started/theming
+ */
+
+:root,
+.light,
+.default,
+[data-theme="light"],
+[data-theme="default"] {
+  /* Theme Colors (Light Mode) */
+  --accent: oklch(65% 0.07 135);
+  --accent-foreground: oklch(99% 0 0);
+  --background: oklch(100% 0.00011 271.152);
+  --foreground: oklch(28% 0.01 90);
+  --border: oklch(90.00% 0.0000 182.31);
+  --danger: oklch(65.32% 0.2328 17.16);
+  --danger-foreground: oklch(99.11% 0 0);
+  --default: oklch(94.00% 0.0000 182.31);
+  --default-foreground: oklch(21.03% 0.0059 182.31);
+  --field-background: oklch(100.00% 0.0000 182.31);
+  --field-border: transparent;
+  --field-foreground: oklch(21.03% 0.0000 182.31);
+  --field-placeholder: oklch(55.17% 0.0000 182.31);
+  --focus: oklch(62.04% 0.1950 182.31);
+  --muted: oklch(55.17% 0.0000 182.31);
+  --overlay: oklch(100.00% 0.0000 182.31);
+  --overlay-foreground: oklch(21.03% 0.0000 182.31);
+  --scrollbar: oklch(87.10% 0.0000 182.31);
+  --segment: oklch(100.00% 0.0000 182.31);
+  --segment-foreground: oklch(21.03% 0.0000 182.31);
+  --separator: oklch(92.00% 0.0000 182.31);
+  --success: oklch(73.29% 0.1935 142.23);
+  --success-foreground: oklch(21.03% 0.0059 142.23);
+  --surface: oklch(100.00% 0.0000 182.31);
+  --surface-foreground: oklch(21.03% 0.0000 182.31);
+  --surface-secondary: oklch(95.24% 0.0000 182.31);
+  --surface-secondary-foreground: oklch(21.03% 0.0000 182.31);
+  --surface-tertiary: oklch(93.73% 0.0000 182.31);
+  --surface-tertiary-foreground: oklch(21.03% 0.0000 182.31);
+  --warning: oklch(78.19% 0.1585 63.75);
+  --warning-foreground: oklch(21.03% 0.0059 63.75);
+
+  /* Border Radius */
+  --radius: 0.5rem;
+  --field-radius: 0.75rem;
+
+  /* Font Family */
+  /* Make sure to load Inter font in your app */
+  --font-sans: var(--font-inter);
+}
+body{
+ font-family: var(--font-vazirmatn), var(--font-samim) , Tahoma, sans-serif !important;
+}
+
+
+.avatar-skeleton {
+  width: 40px;   /* اندازه پیش‌فرض Avatar در Dropdown */
+  height: 40px;
+  border-radius: 9999px;
+  background: linear-gradient(
+    90deg,
+    #e5e7eb 25%,
+    #f3f4f6 37%,
+    #e5e7eb 63%
+  );
+  background-size: 400% 100%;
+  animation: avatar-shimmer 1.2s ease-in-out infinite;
+}
+
+/* shimmer animation */
+@keyframes avatar-shimmer {
+  0% {
+    background-position: 100% 0;
+  }
+  100% {
+    background-position: 0 0;
+  }
+}
